@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Hamiltonian cycle problem</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Hamiltonian cycle problem"/><meta property="og:description" content="Problem: Prove that finding a hamiltonian cycle in a graph (a cycle that visits every vertex exactly once) is NP-hard. This is a well-studied problem with numerous different proofs."/><meta property="og:image" content="https://umnikos.github.io/blog/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Problem: Prove that finding a hamiltonian cycle in a graph (a cycle that visits every vertex exactly once) is NP-hard. This is a well-studied problem with numerous different proofs."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="hamiltonian-circuits"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">umni's ramblings</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="recent-notes desktop-only"><h3>Recent Notes</h3><ul class="recent-ul"><li class="recent-li"><div class="section"><div class="desc"><h3><a href="./hamiltonian-circuits" class="internal">Hamiltonian cycle problem</a></h3></div><p class="meta">Sep 01, 2024</p><ul class="tags"><li><a class="internal tag-link" href="./tags/computer-science">computer-science</a></li><li><a class="internal tag-link" href="./tags/WIP">WIP</a></li></ul></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="./quartz" class="internal">Quartz</a></h3></div><p class="meta">Sep 01, 2024</p><ul class="tags"><li><a class="internal tag-link" href="./tags/software">software</a></li></ul></div></li><li class="recent-li"><div class="section"><div class="desc"><h3><a href="./tab-notes" class="internal">Browser tab notes</a></h3></div><p class="meta">Sep 01, 2024</p><ul class="tags"><li><a class="internal tag-link" href="./tags/software">software</a></li></ul></div></li></ul></div><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./tab-notes" data-for="tab-notes">Browser tab notes</a></li><li><a href="./hamiltonian-circuits" data-for="hamiltonian-circuits">Hamiltonian cycle problem</a></li><li><a href="./quartz" data-for="quartz">Quartz</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Hamiltonian cycle problem</a></div></nav><h1 class="article-title">Hamiltonian cycle problem</h1><p show-comma="true" class="content-meta"><span>Sep 01, 2024</span><span>7 min read</span></p><ul class="tags"><li><a href="./tags/computer-science" class="internal tag-link">computer-science</a></li><li><a href="./tags/WIP" class="internal tag-link">WIP</a></li></ul></div></div><article class="popover-hint"><hr/>
+<blockquote>
+<h3 id="problem-prove-that-finding-a-hamiltonian-cycle-in-a-graph-a-cycle-that-visits-every-vertex-exactly-once-is-np-hard">Problem: Prove that finding a hamiltonian cycle in a graph (a cycle that visits every vertex exactly once) is NP-hard.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#problem-prove-that-finding-a-hamiltonian-cycle-in-a-graph-a-cycle-that-visits-every-vertex-exactly-once-is-np-hard" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+</blockquote>
+<hr/>
+<p>This is a <a href="https://en.wikipedia.org/wiki/Hamiltonian_path_problem" class="external">well-studied problem<svg aria-hidden="true" class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> with numerous different proofs.
+The proof presented here consists of a systematic way to transform an arbitrary SAT problem into a graph that has a hamiltonian cycle if and only if the SAT problem is satisfiable (with the transformation only taking polynomial time).
+Therefore finding a hamiltonian cycle in a graph must be at least as hard as solving SAT, and SAT is NP-hard.</p>
+<p>We begin with definitions:</p>
+<p><strong>Definition:</strong> A “ground” is a set of vertices that form a clique (all vertices are connected to each other) where every vertex has exactly 1 connection to a vertex outside the ground.</p>
+<p><strong>Example:</strong> A graph with a ground of 4 vertices which has been circled:</p>
+<p><img src="./images/hamiltonian-circuits/graph-ground.svg" width="auto" height="auto" alt/></p>
+<p><strong>Notation:</strong> Instead of explicitly drawing the entire ground and all of its edges, we introduce <code>T</code> as notation for linking a non-ground vertex to the ground.</p>
+<p><strong>Example:</strong> The previous graph but drawn using the newly introduced notation:</p>
+<p><img src="./images/hamiltonian-circuits/graph-ground-T.svg" width="auto" height="auto" alt/></p>
+<p><strong>Definition:</strong> A “component” is a set of vertices, connections between those vertices and/or ground, and a set of outwards connections.</p>
+<p><strong>Example:</strong> An example component where the red edges are outwards connections and the rest of the image is the component itself:</p>
+<p><img src="./images/hamiltonian-circuits/graph-component.svg" width="auto" height="auto" alt/></p>
+<p><strong>Definition:</strong> For a given hamiltonian cycle, an edge is “on” if the cycle passes through it, and is “off” otherwise.</p>
+<p><strong>Definition:</strong> An assignment on on/off edges on a component is considered valid if, when the outgoing edges are replaced with connections to ground, there exists a hamiltonian cycle that satisfies the assignment.</p>
+<p><strong>Example:</strong> Here are two different valid assignments for the component from the previous example, where red edges are on and gray edges are off:</p>
+<p><img src="./images/hamiltonian-circuits/graph-component-1.svg" width="auto" height="auto" alt/><img src="./images/hamiltonian-circuits/graph-component-2.svg" width="auto" height="auto" alt/></p>
+<p><strong>Definition:</strong> A “gate” is a component where the outgoing edges have been divided into “inputs” and “outputs” such that, when the input edges are assigned to be on/off in any way, there is exactly one valid assignment for the output edges.</p>
+<p><strong>Theorem:</strong> The following component is a gate, and it is the NOT gate:</p>
+<p><img src="./images/hamiltonian-circuits/graph-gate-not.svg" width="auto" height="auto" alt/></p>
+<p><strong>Proof:</strong> We will make use of the following fact:</p>
+<blockquote>
+<p><strong>Lemma:</strong> For any hamiltonian cycle, every vertex is connected to exactly 2 edges that are “on” (aka. part of the cycle).</p>
+</blockquote>
+<p>Now, since this component has two vertices, let’s name the one on top A and the one on the bottom B.
+B has exactly 2 edges connected to it, so for an assignment to be valid both of those edges must be on (as per the above lemma).
+That immediately fixes the bottom edge of A to be on, so exactly 1 more edge connected to A must be on.
+This means that if we fix the input edge to be on the output edge must be off, and if we fix the input edge to be off the output edge must be on.
+Both of those cases are valid assignments (shown below), and thus our component is a gate.
+Since it also follows the truth table for a NOT gate, it’s a NOT gate.</p>
+<p><img src="./images/hamiltonian-circuits/graph-gate-not-1.svg" width="auto" height="auto" alt/>
+<img src="./images/hamiltonian-circuits/graph-gate-not-2.svg" width="auto" height="auto" alt/></p>
+<hr/>
+<p>We will need a few more gates to be able to express arbitrary SAT expressions, namely AND and OR.
+To make them we’ll need a few extra components.</p>
+<p><strong>Definition:</strong> We will call the following component an “intersection”:</p>
+<p><img src="./images/hamiltonian-circuits/graph-intersection.svg" width="300" height="auto" alt/></p>
+<p><strong>Theorem:</strong> The following two assignments are the only valid assignments for the intersection component:</p>
+<p><img src="./images/hamiltonian-circuits/graph-intersection-1.svg" width="300" height="auto" alt/>
+<img src="./images/hamiltonian-circuits/graph-intersection-2.svg" width="300" height="auto" alt/></p>
+<p><strong>Proof:</strong> By checking all cases.
+The component does not have any connections to ground within itself, so that means it’s only possible for an even amount of outgoing edges to be on.
+It’s not possible for 0 outgoing edges to be on, as that would mean all 8 vertices inside the component are isolated and thus unreachable by the hamiltonian cycle.
+So the only interesting cases are those with 2 or 4 outgoing edges that are on.</p>
+<p>There are two vertices in the component that have exactly 2 edges connected to them.
+The edges connected to those vertices must be on (as per the lemma from earlier).
+Therefore in the case all 4 outgoing edges are on, we get 2 isolated vertices inside the component (as shown below), so this case is also not valid.</p>
+<p><img src="./images/hamiltonian-circuits/graph-intersection-case-4.svg" width="300" height="auto" alt/></p>
+<p>So the only cases left are those with 2 outgoing edges that are on.
+The cases where those two edges are opposite one another are valid and are part of the theorem’s statement.
+The cases where those two edges are adjacent are invalid, because in all of them we get 5 isolated vertices as shown below.
+(Note that even though those 5 vertices can form a cycle of their own, this cycle is isolated from the rest of the graph and thus it still means it’s impossible to construct a hamiltonian cycle.)</p>
+<p><img src="./images/hamiltonian-circuits/graph-intersection-case-adjacent.svg" width="300" height="auto" alt/></p>
+<p>Having now checked all cases, the theorem is proven.</p>
+<p><strong>Definition:</strong> We will call the following component an “all or nothing” component:</p>
+<p><img src="./images/hamiltonian-circuits/graph-all-or-nothing.svg" width="600" height="auto" alt/></p>
+<p><strong>Theorem:</strong> The only two valid assignments for the all or nothing component are all outgoing edges being on, and all outgoing edges being off.</p>
+<p><strong>Proof:</strong> Again by checking all cases. There are only 2 cases to consider, so this is left as an exercise for the reader.</p>
+<p><strong>Notation:</strong> An empty circle with 3 edges coming out of it will be used as shorthand to denote the above component. (As shown below)</p>
+<p><img src="./images/hamiltonian-circuits/graph-all-or-nothing-notation.svg" width="auto" height="auto" alt/></p>
+<p><strong>Theorem:</strong> The following component is a gate, and it is the OR gate:</p>
+<p><img src="./images/hamiltonian-circuits/graph-gate-or.svg" width="auto" height="auto" alt/></p>
+<p><strong>Proof:</strong> By checking all cases. There are 4 valid cases, one for each pair of inputs.</p>
+<p>This construction looks weird and arbitrary, but it’s not.
+The all-or-nothing component when looked at as a gate with 2 inputs and 1 output is almost an OR gate on its own; If both inputs are off the output is off, and if both inputs are on the output is on.
+The problem comes from the fact that’s not a gate. If you try to have one input be on and one input be off, you will not then be able to find a hamiltonian cycle for the configuration.
+Therefore this is a “pseudo-gate” - a gate that isn’t defined on all possible input combinations.</p>
+<p>Right above the all-or-nothing OR pseudo-gate is another OR pseudo-gate. That one works well if 0 or 1 of its inputs are on, but does not work when both of its input are on.
+Therefore the goal of the rest of the graph is to combine both of these pseudo-gates into a single real OR gate.
+On the left of both pseudo-gates are “distributors” (OR pseudo-gates but connected backwards). A distributor has 1 input and 2 outputs.
+If the input is off both outputs are off, and if an input is on exactly one of the outputs is on, but it’s not clear which as both possibilities are valid assignments.
+This lets the inputs themselves “choose” which pseudo-gate to go to;
+If there’s only one input to our gate that is on, that input must go to the top pseudo-gate, and if both of them are on they must both go to the bottom pseudo-gate.
+This means that now all input combinations are valid and properly sent to the correct pseudo-gate.
+On the right of the pseudo-gates is yet another OR pseudo-gate that combines the results.
+It doesn’t need to be a full OR gate to do that as it’s impossible for both pseudo-gates to output an “on” signal at the same time.</p>
+<hr/>
+<p><strong>Theorem:</strong> An acyclic composition of gates is a gate.</p>
+<p><strong>Proof:</strong> By induction on the number of gates in the composition.</p>
+<p><strong>Theorem:</strong> The following component is a gate, and it is the AND gate:</p>
+<p><img src="./images/hamiltonian-circuits/graph-gate-and.svg" width="auto" height="auto" alt/></p>
+<p><strong>Proof:</strong> This is an acyclic combination of gates, therefore a gate.
+By De Morgan’s law, this follows the truth table of an AND gate, therefore it is an AND gate.</p>
+<p><strong>Theorem:</strong> The following two components are both gates, and they’re the COPY and DELETE gates, respectively:</p>
+<p><img src="./images/hamiltonian-circuits/graph-gate-copy.svg" width="auto" height="auto" alt/>
+<img src="./images/hamiltonian-circuits/graph-gate-delete.svg" width="250" height="auto" alt/></p>
+<p><strong>Proof:</strong> By checking all cases.</p>
+<hr/>
+<p><em>To be continued…</em></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="explorer mobile-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./tab-notes" data-for="tab-notes">Browser tab notes</a></li><li><a href="./hamiltonian-circuits" data-for="hamiltonian-circuits">Hamiltonian cycle problem</a></li><li><a href="./quartz" data-for="quartz">Quartz</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.3.1</a> © 2024</p><ul></ul></footer></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" type="application/javascript"></script><script src="./postscript.js" type="module"></script></html>
