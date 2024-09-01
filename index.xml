@@ -10,19 +10,19 @@
     <link>https://umnikos.github.io/blog/hamiltonian-circuits</link>
     <guid>https://umnikos.github.io/blog/hamiltonian-circuits</guid>
     <description> Problem: Prove that finding a hamiltonian cycle in a graph (a cycle that visits every vertex exactly once) is NP-hard. This is a well-studied problem with numerous different proofs.</description>
-    <pubDate>Sun, 01 Sep 2024 13:24:57 GMT</pubDate>
+    <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Quartz</title>
     <link>https://umnikos.github.io/blog/quartz</link>
     <guid>https://umnikos.github.io/blog/quartz</guid>
     <description>Quartz is a static site generator, designed for digital gardening in an increasingly dead internet. I am just using it as the easiest (and laziest) tool out there for making a blog.</description>
-    <pubDate>Sat, 31 Aug 2024 22:39:06 GMT</pubDate>
+    <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Browser tab notes</title>
     <link>https://umnikos.github.io/blog/tab-notes</link>
     <guid>https://umnikos.github.io/blog/tab-notes</guid>
     <description>Lots of browser extensions[1][2] allow you to take notes inside of a new tab, but most of them store said notes inside local storage. This means that if you open multiple new tabs, all of them will have the same notes inside.</description>
-    <pubDate>Sat, 31 Aug 2024 22:18:57 GMT</pubDate>
+    <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Index.html</title>
     <link>https://umnikos.github.io/blog/</link>
