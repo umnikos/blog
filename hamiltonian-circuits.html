@@ -24,7 +24,7 @@ Therefore finding a hamiltonian cycle in a graph must be at least as hard as sol
 <p><strong>Definition:</strong> A “gate” is a component where the outgoing edges have been divided into “inputs” and “outputs” such that the following are true:</p>
 <ol>
 <li>When the input edges are assigned to be on/off in any way, there is exactly one valid assignment for the output edges.</li>
-<li>In all valid assignments, there do not exist two outgoing edges that are connected to each other through a path. (This is to prevent a composition of multiple gates from creating an isolated cycle)</li>
+<li>In all valid assignments, there do not exist two outgoing edges that are connected to each other through a path of “on” edges. (This is to prevent a composition of multiple gates from creating an isolated cycle)</li>
 </ol>
 <p><strong>Theorem:</strong> The following component is a gate, and it is the NOT gate:</p>
 <p><img src="./images/hamiltonian-circuits/graph-gate-not.svg" width="auto" height="auto" alt/></p>
