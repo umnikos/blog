@@ -10,7 +10,13 @@
     <link>https://umnikos.github.io/blog/knots</link>
     <guid>https://umnikos.github.io/blog/knots</guid>
     <description>This is a list of simple knots, organized by use case. Meant as a reference for when you need a knot for something. Bundle things together like a ziptie (binding knot) Reef knot / Square knot - Not that secure, but easy to untie.</description>
-    <pubDate>Mon, 30 Sep 2024 21:04:07 GMT</pubDate>
+    <pubDate>Tue, 01 Oct 2024 14:09:39 GMT</pubDate>
+  </item><item>
+    <title>Index.html</title>
+    <link>https://umnikos.github.io/blog/</link>
+    <guid>https://umnikos.github.io/blog/</guid>
+    <description>Write some cool messages in here.</description>
+    <pubDate>Mon, 30 Sep 2024 22:13:37 GMT</pubDate>
   </item><item>
     <title>Niche CS Games</title>
     <link>https://umnikos.github.io/blog/cs-games</link>
@@ -41,12 +47,6 @@
     <guid>https://umnikos.github.io/blog/tab-notes</guid>
     <description>Lots of browser extensions[1][2] allow you to take notes inside of a new tab, but most of them store said notes inside local storage. This means that if you open multiple new tabs, all of them will have the same notes inside.</description>
     <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Index.html</title>
-    <link>https://umnikos.github.io/blog/</link>
-    <guid>https://umnikos.github.io/blog/</guid>
-    <description>Write some cool messages in here.</description>
-    <pubDate>Fri, 30 Aug 2024 21:30:48 GMT</pubDate>
   </item>
     </channel>
   </rss>
