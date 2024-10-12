@@ -6,6 +6,12 @@
       <description>Last 10 notes on umni&#039;s ramblings</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Index.html</title>
+    <link>https://umnikos.github.io/blog/</link>
+    <guid>https://umnikos.github.io/blog/</guid>
+    <description>Hi, I’m Alex! Known online as “umnikos”. I like math, programming, and everything in-between. What is this place? This is my “blog” where I’ve decided to write things.</description>
+    <pubDate>Sat, 12 Oct 2024 15:48:34 GMT</pubDate>
+  </item><item>
     <title>List of Knots</title>
     <link>https://umnikos.github.io/blog/knots</link>
     <guid>https://umnikos.github.io/blog/knots</guid>
@@ -17,12 +23,6 @@
     <guid>https://umnikos.github.io/blog/fox-game-variant</guid>
     <description>There’s been a “game” going semi-viral recently called “Do Not Find the Fox”. It’s pretty simple: You randomly select and place letter tiles, in order, and if you place all of them without ever spelling “fox” in any direction, you win.</description>
     <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Index.html</title>
-    <link>https://umnikos.github.io/blog/</link>
-    <guid>https://umnikos.github.io/blog/</guid>
-    <description>Write some cool messages in here.</description>
-    <pubDate>Mon, 30 Sep 2024 22:13:37 GMT</pubDate>
   </item><item>
     <title>Niche CS Games</title>
     <link>https://umnikos.github.io/blog/cs-games</link>
