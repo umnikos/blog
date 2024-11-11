@@ -6,11 +6,17 @@
       <description>Last 10 notes on umni&#039;s ramblings</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Niche CS Games</title>
+    <link>https://umnikos.github.io/blog/cs-games</link>
+    <guid>https://umnikos.github.io/blog/cs-games</guid>
+    <description>This is a list of cool games related to computer science that you might not know about. Incredible proof machine Free to play: incredible.pm/ A game about proving things using intuitionistic logic.</description>
+    <pubDate>Mon, 11 Nov 2024 00:23:04 GMT</pubDate>
+  </item><item>
     <title>List of Knots</title>
     <link>https://umnikos.github.io/blog/knots</link>
     <guid>https://umnikos.github.io/blog/knots</guid>
     <description>This is a list of simple knots, organized by use case. Meant as a reference for when you need a knot for something. Complicated rigging systems can easily be created by using multiple of these knots together.</description>
-    <pubDate>Sat, 19 Oct 2024 18:18:46 GMT</pubDate>
+    <pubDate>Sat, 19 Oct 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Index.html</title>
     <link>https://umnikos.github.io/blog/</link>
@@ -23,12 +29,6 @@
     <guid>https://umnikos.github.io/blog/fox-game-variant</guid>
     <description>There’s been a “game” going semi-viral recently called “Do Not Find the Fox”. It’s pretty simple: You randomly select and place letter tiles, in order, and if you place all of them without ever spelling “fox” in any direction, you win.</description>
     <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Niche CS Games</title>
-    <link>https://umnikos.github.io/blog/cs-games</link>
-    <guid>https://umnikos.github.io/blog/cs-games</guid>
-    <description>This is a list of cool games related to computer science that you might not know about. Incredible proof machine Free to play: incredible.pm/ A game about proving things using intuitionistic logic.</description>
-    <pubDate>Sat, 28 Sep 2024 19:26:13 GMT</pubDate>
   </item><item>
     <title>Posts</title>
     <link>https://umnikos.github.io/blog/tags/post</link>
