@@ -6,6 +6,18 @@
       <description>Last 10 notes on umni&#039;s ramblings</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Niche CS Games</title>
+    <link>https://umnikos.github.io/blog/cs-games</link>
+    <guid>https://umnikos.github.io/blog/cs-games</guid>
+    <description>This is a list of cool games related to computer science that you might not know about. Incredible proof machine Free to play: incredible.pm/ A game about proving things using intuitionistic logic.</description>
+    <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Posts</title>
+    <link>https://umnikos.github.io/blog/tags/post</link>
+    <guid>https://umnikos.github.io/blog/tags/post</guid>
+    <description>These are the items that do not get significant edits after publication.</description>
+    <pubDate>Tue, 31 Dec 2024 21:07:53 GMT</pubDate>
+  </item><item>
     <title>My Sidebery Firefox setup</title>
     <link>https://umnikos.github.io/blog/sidebery</link>
     <guid>https://umnikos.github.io/blog/sidebery</guid>
@@ -16,31 +28,19 @@
     <link>https://umnikos.github.io/blog/knots</link>
     <guid>https://umnikos.github.io/blog/knots</guid>
     <description>This is a list of simple knots, organized by use case. Meant as a reference for when you need a knot for something. Complicated rigging systems can easily be created by using multiple of these knots together.</description>
-    <pubDate>Wed, 18 Dec 2024 15:00:22 GMT</pubDate>
+    <pubDate>Wed, 18 Dec 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Emoji Cheatsheet</title>
     <link>https://umnikos.github.io/blog/emoji-cheatsheet</link>
     <guid>https://umnikos.github.io/blog/emoji-cheatsheet</guid>
     <description>...</description>
-    <pubDate>Thu, 05 Dec 2024 00:27:22 GMT</pubDate>
-  </item><item>
-    <title>Niche CS Games</title>
-    <link>https://umnikos.github.io/blog/cs-games</link>
-    <guid>https://umnikos.github.io/blog/cs-games</guid>
-    <description>This is a list of cool games related to computer science that you might not know about. Incredible proof machine Free to play: incredible.pm/ A game about proving things using intuitionistic logic.</description>
-    <pubDate>Mon, 25 Nov 2024 00:13:52 GMT</pubDate>
+    <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>How I Began Journaling</title>
     <link>https://umnikos.github.io/blog/simple-journaling</link>
     <guid>https://umnikos.github.io/blog/simple-journaling</guid>
     <description>I initially began taking notes because, before that, I was feeling overwhelmed. I seemingly had too many tasks and events to keep track of, and I’d constantly forget to do tasks even if it was the only task I had to do for that entire day.</description>
-    <pubDate>Mon, 11 Nov 2024 17:24:07 GMT</pubDate>
-  </item><item>
-    <title>Index.html</title>
-    <link>https://umnikos.github.io/blog/</link>
-    <guid>https://umnikos.github.io/blog/</guid>
-    <description>Hi, I’m Alex! Known online as “umnikos”. I like math, programming, and everything in-between. What is this place? This is my “blog” where I’ve decided to write things.</description>
-    <pubDate>Sat, 12 Oct 2024 15:48:34 GMT</pubDate>
+    <pubDate>Mon, 11 Nov 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>&quot;Do Not Find the Fox&quot; Game Variant</title>
     <link>https://umnikos.github.io/blog/fox-game-variant</link>
@@ -48,11 +48,11 @@
     <description> Update (2024-11-25) Alex Cheddar made a video on this exact variant where he showcases a simpler proof. There’s been a “game” going semi-viral recently called “Do Not Find the Fox”.</description>
     <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Posts</title>
-    <link>https://umnikos.github.io/blog/tags/post</link>
-    <guid>https://umnikos.github.io/blog/tags/post</guid>
-    <description>These are the items that do not get significant edits after publication.</description>
-    <pubDate>Tue, 03 Sep 2024 16:00:16 GMT</pubDate>
+    <title>Index.html</title>
+    <link>https://umnikos.github.io/blog/</link>
+    <guid>https://umnikos.github.io/blog/</guid>
+    <description>Hi, I’m Alex! Known online as “umnikos”. I like math, programming, and everything in-between. What is this place? This is my “blog” where I’ve decided to write things.</description>
+    <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>Hamiltonian Cycle Problem</title>
     <link>https://umnikos.github.io/blog/hamiltonian-circuits</link>
