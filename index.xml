@@ -30,12 +30,6 @@
     <description>This is a list of simple knots, organized by use case. Meant as a reference for when you need a knot for something. Complicated rigging systems can easily be created by using multiple of these knots together.</description>
     <pubDate>Wed, 18 Dec 2024 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Emoji Cheatsheet</title>
-    <link>https://umnikos.github.io/blog/emoji-cheatsheet</link>
-    <guid>https://umnikos.github.io/blog/emoji-cheatsheet</guid>
-    <description>...</description>
-    <pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate>
-  </item><item>
     <title>How I Began Journaling</title>
     <link>https://umnikos.github.io/blog/simple-journaling</link>
     <guid>https://umnikos.github.io/blog/simple-journaling</guid>
@@ -64,6 +58,12 @@
     <link>https://umnikos.github.io/blog/quartz</link>
     <guid>https://umnikos.github.io/blog/quartz</guid>
     <description>Quartz is a static site generator, designed for digital gardening in an increasingly dead internet. I am just using it as the easiest (and laziest) tool out there for making a blog.</description>
+    <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Browser Tab Notes</title>
+    <link>https://umnikos.github.io/blog/tab-notes</link>
+    <guid>https://umnikos.github.io/blog/tab-notes</guid>
+    <description>Lots of browser extensions[1][2] allow you to take notes inside of a new tab, but most of them store said notes inside local storage. This means that if you open multiple new tabs, all of them will have the same notes inside.</description>
     <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
   </item>
     </channel>
