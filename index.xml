@@ -6,6 +6,12 @@
       <description>Last 10 notes on umni&#039;s ramblings</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>God Field Tutorial</title>
+    <link>https://umnikos.github.io/blog/godfield</link>
+    <guid>https://umnikos.github.io/blog/godfield</guid>
+    <description>God Field is a free to play flash game. It’s a dueler where you play cards on your turn until you’re the only one left standing. Rounds are quick, it’s mostly luck, and it’s a lot of fun.</description>
+    <pubDate>Sun, 09 Mar 2025 22:28:33 GMT</pubDate>
+  </item><item>
     <title>Niche CS Games</title>
     <link>https://umnikos.github.io/blog/cs-games</link>
     <guid>https://umnikos.github.io/blog/cs-games</guid>
@@ -58,12 +64,6 @@
     <link>https://umnikos.github.io/blog/quartz</link>
     <guid>https://umnikos.github.io/blog/quartz</guid>
     <description>Quartz is a static site generator, designed for digital gardening in an increasingly dead internet. I am just using it as the easiest (and laziest) tool out there for making a blog.</description>
-    <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Browser Tab Notes</title>
-    <link>https://umnikos.github.io/blog/tab-notes</link>
-    <guid>https://umnikos.github.io/blog/tab-notes</guid>
-    <description>Lots of browser extensions[1][2] allow you to take notes inside of a new tab, but most of them store said notes inside local storage. This means that if you open multiple new tabs, all of them will have the same notes inside.</description>
     <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
   </item>
     </channel>
