@@ -12,29 +12,11 @@
     <description>God Field is a free to play flash game. It’s a dueler where you play cards on your turn until you’re the only one left standing. Rounds are quick, it’s mostly luck, and it’s a lot of fun.</description>
     <pubDate>Mon, 10 Mar 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Niche CS Games</title>
-    <link>https://umnikos.github.io/blog/cs-games</link>
-    <guid>https://umnikos.github.io/blog/cs-games</guid>
-    <description>This is a list of cool games related to computer science that you might not know about. Incredible proof machine Free to play: incredible.pm/ A game about proving things using intuitionistic logic.</description>
-    <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Posts</title>
-    <link>https://umnikos.github.io/blog/tags/post</link>
-    <guid>https://umnikos.github.io/blog/tags/post</guid>
-    <description>These are the items that do not get significant edits after publication.</description>
-    <pubDate>Tue, 31 Dec 2024 21:07:53 GMT</pubDate>
-  </item><item>
     <title>My Sidebery Firefox setup</title>
     <link>https://umnikos.github.io/blog/sidebery</link>
     <guid>https://umnikos.github.io/blog/sidebery</guid>
     <description>Overview I have been using this cool new fork of Firefox for the last 6 months called “Sidebery”. It looks a bit like this It has all the usual features of Firefox, plus a few more: All of the browser tabs are on the side, can be organized hierarchically, and can even be colored.</description>
     <pubDate>Mon, 23 Dec 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>List of Knots</title>
-    <link>https://umnikos.github.io/blog/knots</link>
-    <guid>https://umnikos.github.io/blog/knots</guid>
-    <description>This is a list of simple knots, organized by use case. Meant as a reference for when you need a knot for something. Complicated rigging systems can easily be created by using multiple of these knots together.</description>
-    <pubDate>Wed, 18 Dec 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>How I Began Journaling</title>
     <link>https://umnikos.github.io/blog/simple-journaling</link>
@@ -48,23 +30,11 @@
     <description> Update (2024-11-25) Alex Cheddar made a video on this exact variant where he showcases a simpler proof. There’s been a “game” going semi-viral recently called “Do Not Find the Fox”.</description>
     <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Index.html</title>
-    <link>https://umnikos.github.io/blog/</link>
-    <guid>https://umnikos.github.io/blog/</guid>
-    <description>Hi, I’m Alex! Known online as “umnikos”. I like math, programming, and everything in-between. What is this place? This is my “blog” where I’ve decided to write things.</description>
-    <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
-  </item><item>
     <title>Hamiltonian Cycle Problem</title>
     <link>https://umnikos.github.io/blog/hamiltonian-circuits</link>
     <guid>https://umnikos.github.io/blog/hamiltonian-circuits</guid>
     <description> Problem: Prove that finding a hamiltonian cycle in a graph (a cycle that visits every vertex exactly once) is NP-hard. This is a well-studied problem with numerous different proofs.</description>
     <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Quartz</title>
-    <link>https://umnikos.github.io/blog/quartz</link>
-    <guid>https://umnikos.github.io/blog/quartz</guid>
-    <description>Quartz is a static site generator, designed for digital gardening in an increasingly dead internet. I am just using it as the easiest (and laziest) tool out there for making a blog.</description>
-    <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
